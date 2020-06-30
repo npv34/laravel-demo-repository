@@ -65,6 +65,15 @@ class UserController extends Controller
     {
         $user = $this->userService->findById($userId);
         $posts = $user->posts;
-        dd($posts);
+    }
+
+    public function search(Request $request)
+    {
+        $users = User::where('name','LIKE', '%' . $request->keyword . '%')
+                        ->orWhere('email', 'LIKE', '%' . $request->keyword . '%')
+
+            ->with('roles')->get();
+
+        return response()->json($users);
     }
 }
