@@ -6,7 +6,6 @@ namespace App\Http\Services;
 
 use App\Http\Repositories\UserRepository;
 use App\User;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class UserService

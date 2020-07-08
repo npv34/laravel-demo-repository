@@ -49,6 +49,7 @@
                 </div>
                 <div class="col-12 col-md-7">
                         <input class="form-control mr-sm-2" id="search-user" type="search" placeholder="Search" aria-label="Search">
+                        <ul id="ul-user"></ul>
                 </div>
             </div>
 

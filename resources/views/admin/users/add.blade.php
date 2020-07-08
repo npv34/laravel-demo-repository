@@ -15,6 +15,9 @@
             <div class="card-header">
                 Create user
             </div>
+            @foreach($errors->all() as $error)
+                {{ $error }}
+            @endforeach
             <div class="card-body">
                 <form method="post" action="{{ route('users.store') }}">
                     @csrf
@@ -41,6 +44,15 @@
                         <input type="email" value="{{ old('email') }}" class="form-control {{($errors->first('email')) ? 'is-invalid' : ''}} " name="email">
                         @if($errors->first('email'))
                             <p class="text-danger">{{ $errors->first('email') }}</p>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <label class="{{($errors->first('password')) ? 'text-danger' : ''}}">
+                            <strong>Password</strong>
+                        </label>
+                        <input type="password" value="{{ old('password') }}" class="form-control {{($errors->first('password')) ? 'is-invalid' : ''}} " name="password">
+                        @if($errors->first('password'))
+                            <p class="text-danger">{{ $errors->first('password') }}</p>
                         @endif
                     </div>
                     <div class="form-group">

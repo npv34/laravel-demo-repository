@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::get('admin/login','LoginController@showFormLogin')->name('login');
 Route::post('admin/login','LoginController@login')->name('users.login');
 
-Route::middleware(['auth', 'checkAge'])->prefix('admin')->group(function (){
+Route::middleware('auth')->prefix('admin')->group(function (){
     Route::get('/', function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');

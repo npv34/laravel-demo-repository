@@ -27,8 +27,8 @@ class CreateUserRequest extends FormRequest
             'name' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:8|max:32',
-            'birthday' => 'required|date|after:today',
-            'role' => 'required'
+            'birthday' => 'required|date|before:today',
+           // 'role' => 'required'
         ];
     }
 

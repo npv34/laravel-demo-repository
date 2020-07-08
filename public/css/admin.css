@@ -1,0 +1,9 @@
+#ul-user {
+    position: absolute;
+    width: 300px;
+    background-color: #d0c7c7;
+}
+
+#ul-user li:hover {
+    background-color: #0C9A9A;
+}

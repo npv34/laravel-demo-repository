@@ -17,7 +17,11 @@
         </a>
         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
             <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="{{ route('users.create') }}">Add
-                    user</a><a class="nav-link" href="{{ route('users.index') }}">List</a></nav>
+                    user</a>
+
+                <a class="nav-link" href="{{ route('users.index') }}">List</a>
+
+            </nav>
         </div>
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false"
            aria-controls="collapsePages"
